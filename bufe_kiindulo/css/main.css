@@ -1,0 +1,211 @@
+/* =========================================================
+   Suli Büfé – stíluslap
+
+   Kétféle jelölést találsz:
+   - Ha a „N. feladat” megjegyzés egy szabályon BELÜL áll:
+     ide, a meglévő szabályba írd a hiányzó tulajdonság(ok)at.
+   - Ha a „N. feladat – ÚJ SZABÁLY” megjegyzés KÜLÖN áll:
+     ez alá új szabályt (szelektort) kell felvenned.
+   ========================================================= */
+
+/* ---------- Alapbeállítások ---------- */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #263238;
+  line-height: 1.5;
+}
+
+h2 {
+  margin-top: 28px;
+  /* 1. feladat */
+  color: rgb(46, 125, 50);
+
+}
+
+h2, thead{
+  background-color: rgb(46, 125, 50);
+  color: #ffffff;
+}
+
+/* ---------- Fejléc ---------- */
+header {
+  padding: 24px 22px;
+  border-radius: 14px;
+  color: #ffffff;
+  background-image: linear-gradient(to right, #1b5e20, #7cb342);
+  background-color: #2e7d32;
+  /* 2. feladat */
+
+}
+header h1 {
+  margin: 0;
+  font-size: 2.2em;
+}
+header .alcim {
+  margin: 4px 0 0;
+}
+
+/* ---------- Akciós sáv ---------- */
+.akcio {
+  margin: 16px 0 0;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  background-image: linear-gradient(to bottom, #ffd54f, #ef6c00);
+  background-color: #ffb300;
+  /* 3. feladat */
+
+}
+thead{
+  border-bottom: 3px solid #ef6c00; 
+}
+
+/* ---------- Árlista ---------- */
+.arlista {
+  width: 100%;
+  border-collapse: collapse;
+  /* 4. feladat */
+
+}
+.arlista th,
+.arlista td {
+  border: 1px solid #c5d6c6;
+  padding: 8px 12px;
+  text-align: left;
+}
+.arlista td:last-child,
+.arlista th:last-child {
+  text-align: right;
+}
+
+.arlista tr:nth-child(even) {
+  background-color: #f1f8e9;
+}
+
+/* 1. feladat – ÚJ SZABÁLY (a 4. feladatban ezt is kiegészíted) */
+
+
+/* 5. feladat – ÚJ SZABÁLY */
+
+.meleg{
+  background-color: hsl(15,85%, 90%);
+  color: hsl(15, 60%, 30%);
+}
+
+.hideg{
+  background-color: hsl(200 ,85%, 90%);
+  color: hsl(200, 60%, 30%);
+}
+
+.edes{
+  background-color: hsl(270, 85%, 90%);
+  color: hsl(270, 60%, 30%);
+}
+
+.ital{
+  background-color: hsl(330, 85%, 90%);
+  color: hsl(330, 60%, 30%);
+}
+
+
+
+/* ---------- Kategória-címkék ---------- */
+.cimke {
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 0.85em;
+  font-weight: bold;
+}
+
+/* 6. feladat – ÚJ SZABÁLYOK */
+
+
+/* 7. feladat – ÚJ SZABÁLYOK */
+
+.elfogyott {
+  opacity: 0.6;
+}
+
+small{
+  font-weight: bold;
+  color: #ef6c00;
+}
+
+/* ---------- Menükártyák ---------- */
+.kartyak {
+  display: flex;
+  gap: 12px;
+}
+.kartya {
+  flex: 1;
+  padding: 14px;
+  border: 2px solid #c5d6c6;
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+.kartya h3 {
+  margin: 0 0 6px;
+  color: #2e7d32;
+}
+.kartya p {
+  margin: 0 0 8px;
+}
+.kartya .ar {
+  margin: 0;
+  font-weight: bold;
+  color: #ef6c00;
+}
+
+/* 8. feladat – ÚJ SZABÁLYOK */
+
+.kartya{
+  transition: opacity 0.3s;
+}
+
+.kartyak:hover .kartya{
+  opacity: 0.45;
+}
+
+.kartyak .kartya:hover{
+  opacity: 1;
+}
+
+
+
+/* SZORGALMI – ÚJ SZABÁLY */
+.kartyak .kartya:last-child {
+  border-color: #ef6c00;
+  background-image: linear-gradient(to bottom, #ffe0b2, #ffffff);
+}
+
+
+/* ---------- Lábléc ---------- */
+footer {
+  margin-top: 30px;
+  padding-top: 12px;
+  border-top: 1px solid #c5d6c6;
+  font-size: 0.85em;
+  color: #607d8b;
+  text-align: center;
+}
+
+/* 9. feladat – ÚJ MEDIA QUERY BLOKK */
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .arlista th:nth-child(3),
+  .arlista td:nth-child(3) {
+    display: none;
+  }
+
+  .kartyak {
+    flex-direction: column;
+  }
+}
